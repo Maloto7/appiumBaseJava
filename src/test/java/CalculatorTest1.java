@@ -11,15 +11,15 @@ public class CalculatorTest1 {
     static AndroidDriver<MobileElement> driver;
 //    private static final String APP = "https://github.com/cloudgrey-io/the-app/releases/download/v1.9.0/TheApp-v1.9.0.apk";
 //    private static final String APP = "D:/Cursos/linkedin/testing/1-Mobile Testing With Appium/TheApp-v1.9.0.apk";
-
+    private static final String APP = "..";
 
     private static String appiumServer = "http://localhost:4723/wd/hub";
     public static void main(String[] args){
         try {
             openCalculator();
         } catch (Exception e) {
-            System.out.println(e.getCause());
-            System.out.println(e.getMessage());
+            System.out.println("cause:  " + e.getCause());
+            System.out.println("message:  " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -29,7 +29,7 @@ public class CalculatorTest1 {
         caps.setCapability("platformName", "Android");
         caps.setCapability("platformVersion", "4.4.2");
         caps.setCapability("deviceName", "Sarita");
-        caps.setCapability("udid", "192.168.0.4:5555");
+        caps.setCapability("udid", "192.168.0.6:5555");
         caps.setCapability("automationName", "UiAutomator1");
         caps.setCapability("appPackage", "com.sec.android.app.popupcalculator");
         caps.setCapability("appActivity", "com.sec.android.app.popupcalculator.Calculator");
